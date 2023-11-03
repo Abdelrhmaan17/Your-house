@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="media-query.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your home</title>
@@ -28,9 +29,7 @@
       <!-- start of header section -->
       <header>
         <!-- burger menu sidebar for responsive screens -->
-        <button class="sidebar-burger-menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        
 
         <aside class="sidebar">
           <div class="sidebar-container">
@@ -65,6 +64,9 @@
         </aside>
         <!-- burger menu sidebar for responsive screens -->
         <nav class="header-nav">
+          <button class="sidebar-burger-menu">
+            <i class="fas fa-bars"></i>
+          </button>
           <!-- logo and title -->
           <div class="nav-logo">
             <svg
@@ -110,7 +112,7 @@
           destination information and inspiration from us
         </p>
       </section>
-      <div class="search-nav-container">
+      <div class="search-nav-container2">
         <nav class="search-place-nav-responsive">
           <form class="search-place-form-responsive">
             <label>
@@ -144,14 +146,8 @@
                 placeholder="Guests"
               />
             </label>
-            <label>
-              <input
-                class="search-nav-btn"
-                type="submit"
-                placeholder="Search"
-              />
-            </label>
           </form>
+          <button class="search-nav-btn1">Search</button>
         </nav>
       </div>
 
@@ -189,14 +185,8 @@
                 placeholder="Guests"
               />
             </label>
-            <label>
-              <input
-                class="search-nav-btn"
-                type="submit"
-                placeholder="Search"
-              />
-            </label>
           </form>
+          <button class="search-nav-btn2">Search</button>
         </nav>
       </div>
 
@@ -298,7 +288,6 @@
           <p>320 properties</p>
         </article>
         <!-- end of article 4 -->
-
       </section>
       <!-- end of articles section -->
 
@@ -507,9 +496,6 @@
         <p>my Dream Place 2022</p>
       </div>
     </div>
-
-
-
 
     <script src="home.js"></script>
   </body>

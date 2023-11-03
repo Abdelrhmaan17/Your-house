@@ -1,0 +1,260 @@
+@media (max-width: 900px) {
+  .main-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1017px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-logo {
+    left: 30px;
+  }
+}
+
+@media (min-width: 1017px) {
+  .sidebar-burger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .sign-in-sidebar,
+  .register-sidebar {
+    display: block;
+  }
+  .sign-in-btn,
+  .register-btn {
+    display: none;
+  }
+  .nav-logo {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-qoute {
+    top: 160px;
+    width: 60%;
+    font-size: 20px;
+    top: 200px;
+  }
+  .banner-section h1 {
+    top: 92px;
+    font-size: 26px;
+    left: 55%;
+  }
+}
+@media (max-width: 450px) {
+  .banner-section {
+    height: 300px;
+  }
+  .banner-qoute {
+    width: 80%;
+    font-size: 16px;
+    top: 55%;
+  }
+  .banner-section h1 {
+    font-size: 20px;
+    width: 236px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .search-place-form input {
+    width: 90%;
+  }
+  .search-nav-btn2 {
+    right: 15%;
+  }
+}
+@media (max-width: 1200px) {
+  .search-nav-btn2 {
+    width: 120px;
+  }
+}
+@media (max-width: 1075px) {
+  .search-place-form input {
+    width: 80%;
+  }
+
+  .search-nav-btn2 {
+    width: 15%;
+  }
+
+  .search-nav-container {
+    width: 100%;
+  }
+  .search-place-form p {
+    font-size: 8px;
+  }
+}
+@media (max-width: 900px) {
+  .search-place-nav {
+    display: none;
+  }
+  .search-nav-container2 {
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  .search-place-nav-responsive {
+    width: 250px;
+    height: 260px;
+  }
+  .search-place-form-responsive input {
+    width: 180px;
+    height: 32px;
+  }
+
+  .search-nav-btn1 {
+    width: 120px;
+    height: 30px;
+  }
+  .search-place-form-responsive {
+    gap: -20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .covid-restrictions-warning {
+    height: 100px;
+  }
+}
+
+@media (max-width: 685px) {
+  .section1-enjoy-vacation p {
+    width: 500px;
+    line-height: 150%;
+  }
+}
+@media (max-width: 350px) {
+  .section1-enjoy-vacation p {
+    /* margin-top: 140%; */
+    width: 500px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 685px) and (min-width: 550px) {
+  .choose-country-section-article-img {
+    width: 430px;
+    height: 350px;
+  }
+}
+
+@media (max-width:450px) {
+    .choose-country-section-article-img {
+        width: 280px;
+        height: 200px;
+      }  
+}
+@media (max-width:450px) {
+    .choose-country-section-article-img {
+        width: 270px;
+        height: 200px;
+      }  
+}
+
+@media (max-width: 550px) {
+  .section1-enjoy-vacation p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .section1-enjoy-vacation p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 685px) and (min-width: 550px) {
+  .inspiration-article1,
+  .inspiration-article2,
+  .inspiration-article3 {
+    width: 473px;
+    height: 340px;
+  }
+}
+@media (max-width: 450px) {
+  .inspiration-article1,
+  .inspiration-article2,
+  .inspiration-article3 {
+    width: 270px;
+    height: 260px;
+  }
+  .inspiration-article1 p,
+  .inspiration-article2 p,
+  .inspiration-article3 p {
+    top: 150px;
+    font-size: 16;
+  }
+  .inspiration-article1 h2,
+  .inspiration-article2 h2,
+  .inspiration-article3 h2 {
+    top: 60px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 685px) and (min-width: 550px) {
+  .popular-section-article1 img,
+  .popular-section-article2 img,
+  .popular-section-article3 img,
+  .popular-section-article4 img {
+    width: 505px;
+    height: 400px;
+  }
+}
+@media (max-width: 350px) {
+  .popular-section-article1 img,
+  .popular-section-article2 img,
+  .popular-section-article3 img,
+  .popular-section-article4 img {
+    width: 280px;
+    height: 200px;
+  }
+}
+@media (max-width: 575px) {
+  .explore-dream-place h1 {
+    width: 110%;
+  }
+}
+
+@media (max-width: 900px) {
+  .down-banner h1 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .down-banner h1 {
+    font-size: 22px;
+    width: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .down-banner h1 {
+    left: 30px;
+    font-size: 22px;
+    width: 320px;
+  }
+  .down-banner button {
+    left: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .down-banner h1 {
+    font-size: 16px;
+    width: 250px;
+  }
+}
+@media (max-width: 350px) {
+  .down-banner h1 {
+    font-size: 16px;
+    width: 200px;
+  }
+  .down-banner {
+    margin-bottom: 60%;
+  }
+}
