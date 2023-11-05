@@ -1,5 +1,5 @@
 # Your-house
-Website using HTML CSS and JS technologies
+Website contains 6 pages implemented using HTML CSS and JS technologies
 + fully responsive for all devices with changing in design to suit all devices
 + pure HTML, CSS no bootstrap or similiar techonlogis used 
 + Pixel perfect design
