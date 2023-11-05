@@ -18,18 +18,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="media-query.css">
+    <link rel="stylesheet" type="text/css" href="media-query.css" />
+    <link rel="icon" href="imgs/home-tab.png" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Best place to find a home that suits you!"
+    />
     <title>Your home</title>
   </head>
   <body>
     <!-- start of main content -->
-    <main class="main-container">
+    <main class="main-container-home">
       <!-- start of header section -->
       <header>
         <!-- burger menu sidebar for responsive screens -->
-        
 
         <aside class="sidebar">
           <div class="sidebar-container">
@@ -69,20 +73,21 @@
           </button>
           <!-- logo and title -->
           <div class="nav-logo">
-            <svg
-              class="website-logo"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M3.414 13.7779C2.5 13.9999 2 15.1919 2 15.1919C2 15.1919 5.398 15.6259 6.949 17.3129C8.5 18.9999 9.071 22.2629 9.071 22.2629C9.071 22.2629 10.47 22.6979 10.485 20.8489C10.5 18.9999 9.778 17.3129 9.778 17.3129L13.091 13.9999L16.701 21.7039C16.701 21.7039 18.08 22.2299 18.04 20.3649C18 18.4999 16.85 10.2419 16.85 10.2419L19.678 7.41294C19.869 7.22845 20.0214 7.00776 20.1262 6.76375C20.231 6.51974 20.2862 6.2573 20.2885 5.99174C20.2908 5.72619 20.2402 5.46283 20.1396 5.21703C20.0391 4.97124 19.8906 4.74794 19.7028 4.56015C19.515 4.37237 19.2917 4.22386 19.0459 4.1233C18.8001 4.02274 18.5368 3.97213 18.2712 3.97444C18.0056 3.97675 17.7432 4.03192 17.4992 4.13674C17.2552 4.24156 17.0345 4.39392 16.85 4.58494L13.947 7.48794C13.947 7.48794 6.148 6.09394 3.824 6.29694C1.5 6.49994 2.559 7.56294 2.559 7.56294L10.203 11.2329L6.95 14.4859C6.95 14.4859 4.328 13.5559 3.414 13.7779Z"
-                fill="#2F80ED"
-              />
-            </svg>
-            <h4 class="inline">Your home</h4>
+            <a href="index.html">
+              <svg
+                class="website-logo"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3.414 13.7779C2.5 13.9999 2 15.1919 2 15.1919C2 15.1919 5.398 15.6259 6.949 17.3129C8.5 18.9999 9.071 22.2629 9.071 22.2629C9.071 22.2629 10.47 22.6979 10.485 20.8489C10.5 18.9999 9.778 17.3129 9.778 17.3129L13.091 13.9999L16.701 21.7039C16.701 21.7039 18.08 22.2299 18.04 20.3649C18 18.4999 16.85 10.2419 16.85 10.2419L19.678 7.41294C19.869 7.22845 20.0214 7.00776 20.1262 6.76375C20.231 6.51974 20.2862 6.2573 20.2885 5.99174C20.2908 5.72619 20.2402 5.46283 20.1396 5.21703C20.0391 4.97124 19.8906 4.74794 19.7028 4.56015C19.515 4.37237 19.2917 4.22386 19.0459 4.1233C18.8001 4.02274 18.5368 3.97213 18.2712 3.97444C18.0056 3.97675 17.7432 4.03192 17.4992 4.13674C17.2552 4.24156 17.0345 4.39392 16.85 4.58494L13.947 7.48794C13.947 7.48794 6.148 6.09394 3.824 6.29694C1.5 6.49994 2.559 7.56294 2.559 7.56294L10.203 11.2329L6.95 14.4859C6.95 14.4859 4.328 13.5559 3.414 13.7779Z"
+                  fill="#2F80ED"
+                /></svg>
+              </a>
+              <a href="index.html"><p class="inline">Your home</p></a>
           </div>
 
           <!-- navbar links -->
@@ -98,8 +103,12 @@
 
           <!-- navbar new account buttons -->
           <div class="nav-btns">
-            <button class="register-btn">Register</button>
-            <button class="sign-in-btn">Sign in</button>
+            <a href="sign-up.html"
+              ><button class="register-btn">Register</button></a
+            >
+            <a href="sign-in.html"
+              ><button class="sign-in-btn">Sign in</button></a
+            >
           </div>
         </nav>
       </header>
@@ -115,37 +124,29 @@
       <div class="search-nav-container2">
         <nav class="search-place-nav-responsive">
           <form class="search-place-form-responsive">
-            <label>
-              <input
-                class="location-input-search"
-                type="text"
-                placeholder="Where to?"
-              />
-            </label>
-            <br />
-            <label>
-              <input
-                class="check-in-input-search"
-                type="text"
-                placeholder="Check-in date"
-              />
-            </label>
-            <br />
-            <label>
-              <input
-                class="check-out-input-search"
-                type="text"
-                placeholder="Check-out date"
-              />
-            </label>
-            <br />
-            <label>
-              <input
-                class="guests-input-search"
-                type="text"
-                placeholder="Guests"
-              />
-            </label>
+            <input
+              class="location-input-search"
+              type="text"
+              placeholder="Where to?"
+            />
+            <br/>
+            <input
+              class="check-in-input-search"
+              type="date"
+              placeholder="Check-in date"
+            />
+            <br/>
+            <input
+              class="check-out-input-search"
+              type="date"
+              placeholder="Check-out date"
+            />
+            <br/>
+            <input
+              class="guests-input-search"
+              type="text"
+              placeholder="Guests"
+            />
           </form>
           <button class="search-nav-btn1">Search</button>
         </nav>
@@ -178,13 +179,11 @@
               />
             </label>
             <br />
-            <label>
-              <input
-                class="guests-input-search"
-                type="text"
-                placeholder="Guests"
-              />
-            </label>
+            <input
+              class="guests-input-search"
+              type="text"
+              placeholder="Guests"
+            />
           </form>
           <button class="search-nav-btn2">Search</button>
         </nav>

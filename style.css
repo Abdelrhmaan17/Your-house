@@ -5,6 +5,7 @@
   --headingTextColor: #181818;
   --whiteColor: #ffffff;
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -30,8 +31,10 @@ h3,
 h4 {
   color: var(--headingTextColor);
 }
-
-.main-container {
+button{
+  cursor: pointer;
+}
+.main-container-home {
   /* to make padding works even in mobile size screens */
   padding-right: 20px;
   padding-left: 20px;
@@ -41,8 +44,15 @@ h4 {
   /* set the width for the container */
   width: calc(100% - 200px);
 }
-
-
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  /* width: 1210px; */
+  padding-top: 14px;
+  padding-bottom: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+}
 /* navigation bar styling */
 .nav-logo {
   position: relative;
@@ -62,7 +72,9 @@ a {
   text-decoration: none;
   color: var(--textColor);
 }
-
+a:hover {
+  color: var(--mainColor);
+}
 .nav-links li {
   list-style: none;
   display: inline;
@@ -94,16 +106,12 @@ a {
   margin-left: 10px;
   /* margin-top: 14px; */
 }
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  /* width: 1210px; */
-  padding-top: 14px;
-  padding-bottom: 14px;
-  align-items: center;
-  margin-bottom: 12px;
+.sign-in-btn:hover,
+.register-btn:hover,
+.download-mobile-app:hover {
+  transform: scale(110%);
+  cursor: pointer;
 }
-
 
 .sidebar {
   position: absolute;
@@ -129,7 +137,6 @@ a {
   /* margin-top: 17px; */
   /* display: none;  */
 }
-
 
 .left-arrow,
 .right-arrow,
@@ -290,8 +297,6 @@ a {
   margin: 0;
 }
 
-
-
 .search-nav-container {
   margin-right: auto;
   margin-left: auto;
@@ -370,7 +375,10 @@ a {
   border-color: transparent;
   position: absolute;
 }
-
+.search-nav-btn1:hover,
+.search-nav-btn2:hover {
+  width: min-content;
+}
 .search-nav-btn1 {
   right: 50%;
   top: 90%;
@@ -381,7 +389,6 @@ a {
   top: 50%;
   transform: translate(50%, -50%);
 }
-
 
 .search-place-nav button p {
   font-size: 15px;
@@ -398,10 +405,11 @@ a {
   border-radius: 4px;
   background: var(--Gray-6, #f2f2f2);
   color: var(--lightGrayText);
-  /* left: 10px; */
-  /* top: 1px; */
   border-radius: 4px;
   border-color: transparent;
+}
+input:focus {
+  outline-color: var(--mainColor);
 }
 
 .location-input-search {
@@ -453,6 +461,7 @@ a {
 
 .section1-enjoy-vacation h1 {
   font-size: 28px;
+  line-height: 140%;
 }
 .section1-enjoy-vacation p {
   margin-top: 16px;
@@ -481,6 +490,11 @@ a {
   height: 220px;
   flex-shrink: 0;
   border-radius: 8px;
+  transition: 0.3;
+}
+.choose-country-section-article-img:hover {
+  cursor: pointer;
+  filter: brightness(130%);
 }
 
 .choose-country-section-article h2 {
@@ -495,7 +509,6 @@ a {
   font-weight: 500;
 }
 
-
 .inspiration-section {
   display: flex;
   justify-content: space-between;
@@ -507,6 +520,7 @@ a {
 .popular-hotels-section-heading {
   font-size: 28px;
   margin-bottom: 24px;
+  line-height: 140%;
 }
 
 .inspiration-article1 {
@@ -558,6 +572,11 @@ a {
   left: 20px;
 }
 
+.inspiration-article3:hover,
+.inspiration-article3:hover,
+.inspiration-article3:hover {
+  cursor: pointer;
+}
 
 .popular-hotels-section {
   position: relative;
@@ -581,6 +600,7 @@ a {
   margin-top: 12px;
   color: var(--headingTextColor);
   font-size: 20px;
+  line-height: 140%;
 }
 .popular-hotels-section p {
   margin-top: 4px;
@@ -633,7 +653,6 @@ a {
   left: 0;
   mix-blend-mode: overlay;
 }
-
 
 .explore-dream-place {
   margin-bottom: 80px;
@@ -726,3 +745,311 @@ a {
   width: 100%;
 }
 
+/*  */
+/*  */
+/*  */
+/* CSS for sign up page */
+/*  */
+/*  */
+/*  */
+
+.main-container-sign-up,
+.main-container-sign-in,
+.main-container-create-pw,
+.main-container-check-inbox {
+  /* to make padding works even in mobile size screens */
+  padding-right: 20px;
+  padding-left: 20px;
+  /* to set all elements in the center verticlly */
+  margin-right: auto;
+  margin-left: auto;
+  /* set the width for the container */
+  width: 440px;
+}
+
+.sign-up-section,
+.Forgot-pw-section,
+.create-password-section,
+.check-inbox-section {
+  text-align: center;
+  margin-top: 80px;
+}
+.sign-up-section h1 {
+  font-size: 28px;
+  margin-bottom: 65px;
+}
+
+.text-box {
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding: 11px 12px 12px 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--Gray-6, #f2f2f2);
+  border-color: transparent;
+  margin-bottom: 30px;
+}
+
+.email-text-box {
+  position: relative;
+}
+.email-text-box::before {
+  position: absolute;
+  content: "Your email address";
+  font-weight: 600;
+  font-size: 14px;
+  left: -200px;
+  top: -25px;
+}
+
+.sign-up-button,
+.sign-in-button,
+.forgot-pw-button,
+.back-to-sign-inbox-button {
+  color: white;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  width: 400px;
+  padding: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: var(--Blue-1, #2f80ed);
+  border-color: transparent;
+}
+.sign-up-button:hover,
+.sign-in-button:hover,
+.forgot-pw-button:hover,
+.back-to-sign-inbox-button:hover{
+  background-color: #004eb4;
+  cursor: pointer;
+}
+.flex-2lines-text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.text-between-lines {
+  color: var(--Gray-2, #4f4f4f);
+  font-size: 14px;
+  font-weight: 500;
+  width: 175px;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.28px;
+}
+.under-sign-up-lines {
+  width: 100px;
+  height: 1px;
+  margin-top: 10px;
+  background: #e0e0e0;
+}
+
+.sign-up-google-button,
+.sign-in-google-button {
+  display: flex;
+  width: 400px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--Gray-5, #e0e0e0);
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.sign-up-facebook-button,
+.sign-in-facebook-button {
+  display: flex;
+  width: 400px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: #475993;
+  color: white;
+  border: transparent;
+}
+
+.sign-in-instaed,
+.sign-up-instaed {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.sign-in-instaed {
+  margin-top: 60px;
+}
+.sign-up-instaed {
+  margin-top: 40px;
+}
+
+.sign-in-sign-up-page,
+.sign-up-sign-in-page {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--mainColor);
+}
+/*  */
+/*  */
+/*  */
+/* CSS for sign in page */
+/*  */
+/*  */
+/*  */
+.password-text-box,
+.create-password-text-box,
+.rewrite-password-text-box {
+  position: relative;
+}
+.password-text-box::before,
+.create-password-text-box::before,
+.rewrite-password-text-box::before {
+  position: absolute;
+  font-weight: 600;
+  font-size: 14px;
+  left: -200px;
+  top: -25px;
+}
+.password-text-box::before {
+  content: "Password";
+}
+.create-password-text-box::before {
+  content: "Password";
+}
+.rewrite-password-text-box::before {
+  content: "Confirm password";
+}
+
+.eye-password {
+  position: absolute;
+  z-index: 1;
+  left: 170px;
+  top: 9px;
+}
+
+.keepme-sign-in-box {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--Gray-4, #bdbdbd);
+  background: #fff;
+}
+.keepme-sign-in-forgot {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.keepme-sign-in {
+  display: flex;
+  gap: 8px;
+}
+
+/*  */
+/*  */
+/*  */
+/* Forgot password page */
+/*  */
+/*  */
+/*  */
+
+.forgot-btn {
+  color: var(--mainColor);
+  background-color: transparent;
+  border: none;
+}
+.sign-up-instaed {
+  margin-bottom: 100px;
+}
+.main-container-sign-in {
+  margin-bottom: 200px;
+}
+
+.link-for-forgot-pw {
+  width: 420px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.Forgot-pw-section h1 {
+  font-size: 28px;
+}
+
+.terms-privacy-links {
+  color: var(--mainColor);
+}
+.conditions-text {
+  margin-top: 30px;
+  text-align: justify;
+  font-size: 16px;
+  letter-spacing: 0.28px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+/*  */
+/*  */
+/*  */
+/* Create password page */
+/*  */
+/*  */
+/*  */
+.create-password-section h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.create-password-text-box {
+  margin-top: 20px;
+}
+.safe-password-rules {
+  margin-bottom: 60px;
+}
+.create-password-section .text-box {
+  margin-top: 20px;
+}
+.inbox-photo-container {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(254, 226, 101, 0.3);
+  left: 50%;
+  transform: translate(-50%);
+}
+.check-inbox-section {
+  /* position: relative; */
+}
+.inbox-photo {
+  margin-top: 25px;
+}
+
+.check-inbox-section h1 {
+  font-size: 28px;
+  margin-top: 40px;
+}
+.check-inbox-section span {
+  font-weight: bold;
+}
+
+.we-sent-email {
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
