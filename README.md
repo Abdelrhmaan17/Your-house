@@ -7,7 +7,7 @@ Website contains 8 pages implemented using HTML CSS and JS technologies
 ## pages in website
 + Home page
 + Search results page 
-+ Place ditales page
++ Place details page
 + Sign-in page
 + Sign-up page
 + Forgot password page
