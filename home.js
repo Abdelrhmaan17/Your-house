@@ -21,3 +21,7 @@ closeBtn.addEventListener("click", closeSidebar);
 function closeSidebar() {
   sidebar.classList.remove("show-sidebar");
 }
+
+// search result page
+let userProfile =document.querySelector(".user-profile-photo-nav");
+ 
