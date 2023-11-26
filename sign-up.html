@@ -30,6 +30,42 @@
   <body>
     <div class="main-container-home">
       <header class="header-nav">
+        <!-- burger menu sidebar for responsive screens -->
+
+        <aside class="sidebar">
+          <div class="sidebar-container">
+            <div>
+              <img class="logo" src="logo.png" alt="" />
+              <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <ul class="links">
+              <li class="home-sidebar">
+                <a a href="" class="home">Home</a>
+              </li>
+              <li class="discover-sidebar">
+                <a href="" class="discover">Discover</a>
+              </li>
+              <li class="activties-sidebar">
+                <a href="" class="activties">Activties</a>
+              </li>
+              <li class="about-sidebar">
+                <a href="" class="about">About</a>
+              </li>
+              <li class="contact-sidebar">
+                <a href="" class="contact">Contact</a>
+              </li>
+              <li class="register-sidebar">
+                <a href="" class="register">Register</a>
+              </li>
+              <li class="sign-in-sidebar">
+                <a href="" class="sign-in">Sign-in</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <button class="sidebar-burger-menu">
+          <i class="fas fa-bars"></i>
+        </button>
         <div class="nav-logo">
           <a href="index.html">
             <svg
@@ -54,10 +90,11 @@
     <main class="main-container-sign-up">
       <section class="sign-up-section">
         <h1>Register</h1>
-        <form>
-          <label class="email-text-box">
-            <input class="text-box" type="text" placeholder="" />
+        <form class="form-sign-up">
+          <label class="label-email-box">
+            Your email address
           </label>
+            <input class="text-box" type="text" placeholder="" />
         </form>
         <a href="create-pw.html"
           ><button class="sign-up-button">Continue with email</button></a
@@ -99,10 +136,9 @@
         </button>
 
         <div class="sign-in-instaed">
-          <p>Already have an account?</p>
+          <p class="have-account">Already have an account?</p>
           <a href="sign-in.html"
-            ><button class="sign-in-sign-up-page">Sign in</button></a
-          >
+            ><button class="sign-in-sign-up-page">Sign in</button></a>
         </div>
       </section>
     </main>

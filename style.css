@@ -59,6 +59,7 @@ button {
   position: relative;
   width: 105px;
 }
+
 .inline {
   position: absolute;
   display: inline;
@@ -273,20 +274,7 @@ a:hover {
   line-height: normal;
   width: 373px;
 }
-/* .title-banner{
-  position: absolute;
-  color: var(--whiteColor);
-  left: 50%;
-  top: 180px;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 32px;
-  line-height: normal;
-  width: 373px;
-  font-weight:bold; */
-/* display: none; */
-/* } */
+
 .banner-qoute {
   font-size: 20px;
   width: 650px;
@@ -312,6 +300,11 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
 }
+.main-container-place-details .search-nav-container {
+  margin-top: 40px;
+  width: 100%;
+}
+
 .search-place-nav,
 .search-results-place-nav,
 .place-details-place-nav {
@@ -321,7 +314,7 @@ a:hover {
   border-radius: 8px;
   background: var(--whiteColor);
   box-shadow: 0px 4px 37px 0px rgba(0, 0, 0, 0.15);
-  margin-top: -32px;
+  margin-top: -15px;
 }
 
 .search-place-form,
@@ -334,12 +327,21 @@ a:hover {
   top: 50%;
   transform: translate(50%, -50%);
 }
+.main-container-place-details .search-place-form {
+  width: calc(100% - 350px);
+}
 
-.search-nav-container2 {
+.search-nav-container2,
+.search-nav-container-place {
   margin-right: auto;
   margin-left: auto;
-  width: calc(100% - 500px);
   display: none;
+}
+.search-nav-container2 {
+  width: calc(100% - 500px);
+}
+.search-nav-container-place {
+  width: 80%;
 }
 .search-place-nav-responsive {
   position: relative;
@@ -432,6 +434,7 @@ a:hover {
 .guests-input-search-rooms {
   width: 270px;
 }
+
 input:focus {
   outline-color: var(--mainColor);
 }
@@ -508,8 +511,6 @@ input:focus {
   margin-top: 30px;
   margin-bottom: 60px;
   flex-wrap: wrap;
-
-  /* flex-shrink: 3; */
 }
 .choose-country-section-article {
   margin-top: 20px;
@@ -709,6 +710,11 @@ input:focus {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.flex-list {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
 .footer ul {
   list-style: none;
 }
@@ -809,16 +815,21 @@ input:focus {
 .check-inbox-section {
   text-align: center;
   margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .sign-up-section h1 {
   font-size: 28px;
   margin-bottom: 65px;
+  display: flex;
+  justify-content: center;
 }
 
 .text-box {
   position: relative;
   display: flex;
-  width: 400px;
+  height: 45px;
+  width: 100%;
   padding: 11px 12px 12px 12px;
   align-items: center;
   gap: 10px;
@@ -831,13 +842,12 @@ input:focus {
 .email-text-box {
   position: relative;
 }
-.email-text-box::before {
-  position: absolute;
-  content: "Your email address";
-  font-weight: 600;
-  font-size: 14px;
-  left: -200px;
-  top: -25px;
+.form-sign-up {
+  position: relative;
+}
+.label-email-box {
+  top: -22px;
+  left: 0;
 }
 
 .sign-up-button,
@@ -848,8 +858,8 @@ input:focus {
   display: flex;
   font-size: 15px;
   font-weight: 500;
-  width: 400px;
-  padding: 12px 18px;
+  height: 45px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -864,11 +874,16 @@ input:focus {
   background-color: #004eb4;
   cursor: pointer;
 }
+.under-sign-up-lines {
+  width: 100px;
+  height: 1px;
+  margin-top: 10px;
+  background: #e0e0e0;
+}
 .flex-2lines-text {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
-  /* justify-content: space-between; */
   gap: 10px;
 }
 
@@ -880,20 +895,14 @@ input:focus {
   line-height: 18px; /* 128.571% */
   letter-spacing: 0.28px;
 }
-.under-sign-up-lines {
-  width: 100px;
-  height: 1px;
-  margin-top: 10px;
-  background: #e0e0e0;
-}
 
 .sign-up-google-button,
 .sign-in-google-button {
   display: flex;
-  width: 400px;
+  height: 45px;
+  width: 100%;
   font-size: 15px;
   font-weight: 500;
-  padding: 12px 18px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -906,10 +915,10 @@ input:focus {
 .sign-up-facebook-button,
 .sign-in-facebook-button {
   display: flex;
-  width: 400px;
+  height: 45px;
+  width: 100%;
   font-size: 15px;
   font-weight: 500;
-  padding: 12px 18px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -923,12 +932,18 @@ input:focus {
 .sign-up-instaed {
   position: absolute;
   display: flex;
-  gap: 5px;
+  /* gap: -5px; */
   left: 50%;
   transform: translate(-50%, 0%);
 }
 .sign-in-instaed {
   margin-top: 60px;
+}
+.have-account {
+  width: 200px;
+}
+.sign-in-instaed button {
+  width: 50px;
 }
 .sign-up-instaed {
   margin-top: 40px;
@@ -953,14 +968,10 @@ input:focus {
 .rewrite-password-text-box {
   position: relative;
 }
-.password-text-box::before,
-.create-password-text-box::before,
-.rewrite-password-text-box::before {
+.label-password-box {
   position: absolute;
-  font-weight: 600;
-  font-size: 14px;
-  left: -200px;
-  top: -25px;
+  top: 50px;
+  left: 0;
 }
 .password-text-box::before {
   content: "Password";
@@ -972,11 +983,23 @@ input:focus {
   content: "Confirm password";
 }
 
-.eye-password {
+.eye-create-password,
+.eye-password,
+.eye-create-password-rewrite {
   position: absolute;
   z-index: 1;
-  left: 170px;
-  top: 9px;
+}
+.eye-password {
+  right: 15px;
+  top: 88px;
+}
+.eye-create-password {
+  top: 10px;
+  right: 15px;
+}
+.eye-create-password-rewrite {
+  top: 106px;
+  right: 15px;
 }
 
 .keepme-sign-in-box {
@@ -1018,13 +1041,13 @@ input:focus {
 }
 
 .link-for-forgot-pw {
-  width: 420px;
   margin-top: 20px;
   margin-bottom: 60px;
 }
 
 .Forgot-pw-section h1 {
   font-size: 28px;
+  line-height: 150%;
 }
 
 .terms-privacy-links {
@@ -1034,7 +1057,7 @@ input:focus {
   margin-top: 30px;
   text-align: justify;
   font-size: 16px;
-  letter-spacing: 0.28px;
+  letter-spacing: 0.12px;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
@@ -1058,11 +1081,11 @@ input:focus {
   margin-bottom: 60px;
 }
 .create-password-section .text-box {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .inbox-photo-container {
   position: relative;
-  width: 280px;
+  width: calc(100% - 100px);
   height: 250px;
   flex-shrink: 0;
   border-radius: 20px;
@@ -1070,11 +1093,11 @@ input:focus {
   left: 50%;
   transform: translate(-50%);
 }
-.check-inbox-section {
-  /* position: relative; */
-}
+
 .inbox-photo {
   margin-top: 25px;
+  width: calc(100% - 100px);
+  height: calc(100% - 50px);
 }
 
 .check-inbox-section h1 {
@@ -1107,9 +1130,20 @@ input:focus {
 .header-loged-in-nav-search-results {
   display: flex;
   justify-content: space-around;
+  position: relative;
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: white;
+}
+.header-loged-in-nav {
+  gap: 75px;
+}
+.header-place-details-content {
+  display: flex;
+  left: 0;
+  width: 100%;
+  gap: 65px;
+  justify-content: space-around;
 }
 .header-loged-in-nav {
   background-color: white;
@@ -1182,6 +1216,10 @@ a {
   width: 295px;
   margin-right: auto;
   margin-left: auto;
+}
+.body-for-place-detailes-page .sidebar-burger-menu {
+  top: 20px;
+  left: 35px;
 }
 
 .search-filter-aside {
@@ -1605,7 +1643,7 @@ a {
 }
 
 .covid-footer-container {
-  width: 1240px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1630,19 +1668,43 @@ a {
 }
 
 .place-photos {
-  /* flex-shrink: 0; */
-  /* background: linear-gradient(180deg, rgba(244, 244, 244, 0) 0%, #fff 100%); */
+  position: relative;
   display: flex;
   justify-content: space-between;
-  /* gap: 1px; */
   margin-top: 24px;
 }
 .big-photo-place {
-  width: 800px;
+  width: calc(100% - 425px);
   height: 452px;
   flex-shrink: 0;
   border-radius: 5px;
   background-size: cover no-repeat;
+}
+
+.left-arrow-place,
+.right-arrow-place {
+  color: white;
+  border: none;
+  background: none;
+  position: absolute;
+  font-size: 32px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.left-arrow-place {
+  left: 5%;
+}
+
+.right-arrow-place {
+  left: 95%;
+}
+
+.left-arrow-place:hover,
+.right-arrow-place:hover {
+  color: var(--mainColor);
+  cursor: pointer;
 }
 .small-photo-place,
 .small-photo-place1 {
@@ -1665,7 +1727,7 @@ a {
   margin-left: auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: calc(100% - 235px);
+  width: calc(100% - 200px);
 }
 
 .filter-place,
@@ -1689,27 +1751,35 @@ a {
 
 .place-title-heading {
   margin-top: 40px;
+  width: fit-content;
 }
 
 .five-stars-place-page,
 .location-place {
   display: flex;
   margin-top: 20px;
+  width: fit-content;
 }
 .five-stars-place-page p,
 .location-place p {
   margin-left: 12px;
+  width: fit-content;
+}
+.location-place p {
+  width: fit-content;
 }
 .overview-place {
   position: relative;
   margin-top: 30px;
-  width: 800px;
+  width: 70%;
   height: 508px;
   flex-shrink: 0;
   border-radius: 6px;
   background: #fff;
 }
-
+.place-title-overview {
+  width: 95%;
+}
 .over-view-heading,
 .top-facilites-heading {
   position: absolute;
@@ -1723,24 +1793,39 @@ a {
 }
 
 .top-facilites-heading {
-  top: 333px;
-  left: 30px;
+  top: 65%;
+  left: 4%;
+}
+
+.place-overviews-desc,
+.place-overviews-desc2,
+.place-overviews-desc3 {
+  position: absolute;
+  width: 93%;
 }
 
 .place-overviews-desc {
-  position: absolute;
-  width: 740px;
-  top: 65px;
+  top: 12%;
+  left: 30px;
+}
+.place-overviews-desc2 {
+  top: 25%;
+  left: 30px;
+}
+.place-overviews-desc3 {
+  top: 45%;
   left: 30px;
 }
 
 .line-overview {
-  width: 810px;
+  width: 95%;
   height: 1px;
   flex-shrink: 0;
   background-color: #e0e0e0;
   position: absolute;
-  top: 307px;
+  left: 50%;
+  transform: translate(-50%);
+  top: 60%;
 }
 
 .flex-facilites {
@@ -1750,22 +1835,26 @@ a {
   display: inline;
   position: absolute;
   width: max-content;
+  line-height: 100%;
   margin-left: 12px;
 }
 
 .facilites-blocks {
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  top: 378px;
+  top: 73%;
   left: 30px;
-  width: 410px;
+  width: 50%;
 }
 .map-section {
   margin-top: 40px;
+  position: absolute;
+  right: 0;
+  width: 31%;
 }
 .map-section img {
-  width: 400px;
   height: 240px;
   flex-shrink: 0;
   border-radius: 6px;
@@ -1801,7 +1890,7 @@ a {
 
 .place-ditales-map {
   display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 
 .available-rooms-section h2 {
@@ -1814,11 +1903,12 @@ a {
 .promo-rooms-section {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 16px;
 }
 .blue-box-promo {
   position: relative;
-  width: 400px;
+  width: 33%;
   height: 340px;
   flex-shrink: 0;
   border-radius: 6px;
@@ -1826,13 +1916,12 @@ a {
 }
 
 .blue-box-promo .nav-logo {
-  top: 72px;
+  top: 25%;
   left: 28px;
 }
 
 .blue-box-promo p {
   position: absolute;
-
   left: 26px;
   color: #fff;
   font-size: 24px;
@@ -1842,23 +1931,24 @@ a {
   flex-shrink: 0;
 }
 .discount-blue-box-promo {
-  top: 126px;
+  top: 40%;
 }
 .blue-box-promo-text {
-  top: 158px;
+  top: 50%;
 }
 .blue-box-promo span {
   color: #ffd723;
 }
 .blue-box-promo img {
   position: absolute;
-  left: 154px;
+  width: 45%;
+  left: 160px;
   top: 30px;
 }
 
 .room-card-place-ditales {
   position: relative;
-  width: 400px;
+  width: 33%;
   height: 432px;
   flex-shrink: 0;
   border-radius: 6px;
@@ -1868,7 +1958,7 @@ a {
 .room-card-place-ditales img {
   position: absolute;
   top: 0px;
-  width: 400px;
+  width: 100%;
   height: 200px;
   flex-shrink: 0;
   border-radius: 6px 6px 0px 0px;
@@ -1879,6 +1969,7 @@ a {
   position: absolute;
   top: 180px;
   left: 20px;
+  line-height: 130%;
   color: #1a1a1a;
   font-size: 18px;
   font-weight: 600;
@@ -1892,9 +1983,10 @@ a {
 .reserve-room-card-button {
   position: absolute;
   top: 364px;
-  left: 20px;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  width: 360px;
+  width: 90%;
   padding: 12px 18px;
   justify-content: center;
   align-items: center;
@@ -1977,13 +2069,26 @@ a {
 .label-debit-card,
 .label-security-code,
 .label-zip-code,
-.label-coupon {
+.label-coupon,
+.label-email-box,
+.label-password-box,
+.label-create-password-box,
+.label-rewrite-password {
   position: absolute;
   color: #181818;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%; /* 19.6px */
+}
+.label-create-password-box {
+  top: -20px;
+  left: 0;
+}
+.label-rewrite-password {
+  top: 73px;
+  left: 0;
+  z-index: 1;
 }
 .label-countries-code {
   position: absolute;
@@ -2392,7 +2497,7 @@ a {
   left: 245px;
 }
 
-.check-out-flex{
+.check-out-flex {
   display: flex;
   justify-content: space-between;
 }

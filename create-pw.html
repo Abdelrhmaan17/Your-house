@@ -30,6 +30,40 @@
   <body>
     <div class="main-container-home">
       <header class="header-nav">
+        <aside class="sidebar">
+          <div class="sidebar-container">
+            <div>
+              <img class="logo" src="logo.png" alt="" />
+              <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <ul class="links">
+              <li class="home-sidebar">
+                <a a href="" class="home">Home</a>
+              </li>
+              <li class="discover-sidebar">
+                <a href="" class="discover">Discover</a>
+              </li>
+              <li class="activties-sidebar">
+                <a href="" class="activties">Activties</a>
+              </li>
+              <li class="about-sidebar">
+                <a href="" class="about">About</a>
+              </li>
+              <li class="contact-sidebar">
+                <a href="" class="contact">Contact</a>
+              </li>
+              <li class="register-sidebar">
+                <a href="" class="register">Register</a>
+              </li>
+              <li class="sign-in-sidebar">
+                <a href="" class="sign-in">Sign-in</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <button class="sidebar-burger-menu">
+          <i class="fas fa-bars"></i>
+        </button>
         <div class="nav-logo">
           <a href="index.html">
             <svg
@@ -59,37 +93,36 @@
           and numbers.
         </p>
 
-        <form>
-          <label class="create-password-text-box">
-            <svg
-              class="eye-password"
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="21"
-              viewBox="0 0 20 21"
-              fill="none"
-            >
-              <path
-                d="M12.9833 10.5C12.9833 12.15 11.6499 13.4833 9.99993 13.4833C8.34993 13.4833 7.0166 12.15 7.0166 10.5C7.0166 8.85 8.34993 7.51666 9.99993 7.51666C11.6499 7.51666 12.9833 8.85 12.9833 10.5Z"
-                stroke="#4F4F4F"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M9.99987 17.3916C12.9415 17.3916 15.6832 15.6583 17.5915 12.6583C18.3415 11.4833 18.3415 9.50831 17.5915 8.33331C15.6832 5.33331 12.9415 3.59998 9.99987 3.59998C7.0582 3.59998 4.31654 5.33331 2.4082 8.33331C1.6582 9.50831 1.6582 11.4833 2.4082 12.6583C4.31654 15.6583 7.0582 17.3916 9.99987 17.3916Z"
-                stroke="#4F4F4F"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <input class="text-box" type="text" placeholder="" />
-          </label>
+        <form class="form-sign-up">
+          <label class="label-create-password-box">Password</label>
+          <svg
+            class="eye-create-password"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="21"
+            viewBox="0 0 20 21"
+            fill="none"
+          >
+            <path
+              d="M12.9833 10.5C12.9833 12.15 11.6499 13.4833 9.99993 13.4833C8.34993 13.4833 7.0166 12.15 7.0166 10.5C7.0166 8.85 8.34993 7.51666 9.99993 7.51666C11.6499 7.51666 12.9833 8.85 12.9833 10.5Z"
+              stroke="#4F4F4F"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.99987 17.3916C12.9415 17.3916 15.6832 15.6583 17.5915 12.6583C18.3415 11.4833 18.3415 9.50831 17.5915 8.33331C15.6832 5.33331 12.9415 3.59998 9.99987 3.59998C7.0582 3.59998 4.31654 5.33331 2.4082 8.33331C1.6582 9.50831 1.6582 11.4833 2.4082 12.6583C4.31654 15.6583 7.0582 17.3916 9.99987 17.3916Z"
+              stroke="#4F4F4F"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input class="text-box" type="text" placeholder="" />
 
-          <label class="rewrite-password-text-box">
+          <label class="label-rewrite-password">Confirm password</label>
             <svg
-              class="eye-password"
+              class="eye-create-password-rewrite"
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="21"
@@ -112,7 +145,7 @@
               />
             </svg>
             <input class="text-box" type="text" placeholder="" />
-          </label>
+         
         </form>
         <a href="index.html"
           ><button class="sign-up-button">Create account</button></a
