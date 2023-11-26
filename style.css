@@ -496,6 +496,7 @@ input:focus {
 .section1-enjoy-vacation h1 {
   font-size: 28px;
   line-height: 140%;
+  width: fit-content;
 }
 .section1-enjoy-vacation p {
   margin-top: 16px;
@@ -510,7 +511,13 @@ input:focus {
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 60px;
-  flex-wrap: wrap;
+  gap: 14px;
+}
+.flex-countries {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+
 }
 .choose-country-section-article {
   margin-top: 20px;
@@ -518,7 +525,7 @@ input:focus {
 }
 
 .choose-country-section-article-img {
-  width: 300px;
+  width: 103%;
   height: 220px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -1642,8 +1649,8 @@ a {
   transform: translate(-50%);
 }
 
-.covid-footer-container {
-  width: 100%;
+.covid-container-search-place {
+  width: calc(100% - 278px);
   margin-right: auto;
   margin-left: auto;
 }

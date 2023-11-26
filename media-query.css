@@ -80,6 +80,15 @@
     width: 120px;
   }
 }
+@media (max-width: 1100px) {
+  .choose-country-section {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex-countries {
+    width: 100%;
+  }
+}
 @media (max-width: 1075px) {
   .search-place-form input {
     width: 80%;
@@ -140,28 +149,21 @@
 }
 @media (max-width: 350px) {
   .section1-enjoy-vacation p {
-    /* margin-top: 140%; */
     width: 500px;
     line-height: 150%;
   }
 }
 
-@media (max-width: 685px) and (min-width: 550px) {
-  .choose-country-section-article-img {
-    width: 300px;
-    height: 250px;
-  }
-}
+
 
 @media (max-width: 450px) {
-  .choose-country-section-article-img {
-    width: 280px;
-    height: 200px;
+  
+  .flex-countries{
+    flex-wrap: wrap;
+    width: 100%;
   }
-}
-@media (max-width: 450px) {
   .choose-country-section-article-img {
-    width: 270px;
+    width: 110%;
     height: 200px;
   }
 }
@@ -356,7 +358,7 @@
   .notifications-profile-photo {
     right: 10px;
   }
-  .main-container-place-details .search-place-form  {
+  .main-container-place-details .search-place-form {
     width: calc(100% - 240px);
   }
   .main-container-place-details .search-place-form input {
@@ -409,7 +411,6 @@
   .blue-box-promo img {
     width: 25%;
   }
-  
 }
 @media (max-width: 700px) {
   .room-card-place-ditales {
