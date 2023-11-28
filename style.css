@@ -142,8 +142,7 @@ a:hover {
   font-size: 24px;
   border-radius: 0;
   color: var(--lightGrayText);
-  /* margin-top: 17px; */
-  /* display: none;  */
+  display: none;
 }
 
 .left-arrow,
@@ -517,7 +516,6 @@ input:focus {
   display: flex;
   justify-content: space-between;
   gap: 14px;
-
 }
 .choose-country-section-article {
   margin-top: 20px;
@@ -2507,4 +2505,64 @@ a {
 .check-out-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.filter-responsive .search-filter-aside {
+  margin-bottom: 15px;
+}
+.filter-responsive .filter-places {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.filter-responsive {
+  width: 100%;
+  display: none;
+}
+.filter-responsive .search-filter-aside {
+  width: 60%;
+}
+.filter-responsive .search-filter-aside h3 {
+  font-size: 16px;
+  top: 10px;
+}
+.filter-responsive h3{
+  font-size: 16px;
+}
+.filter-responsive .search-filter-aside input {
+  width: 70%;
+  top: 60px;
+}
+.filter-responsive .your-budget-box{
+  width: 125%;
+}
+.filter-responsive .budget-box-title{
+  width: 100%;
+}
+.filter-responsive .rating-box{
+  width: 110%;
+}
+.filter-responsive .rating{
+  width: 18%;
+}
+.filter-responsive .rating-one,.filter-responsive .rating-five {
+  width: 18%;
+}
+.filter-responsive .popular-filters-box{
+  width: 110%;
+}
+.filter-responsive label{
+  font-size: 14px;
+}
+.filter-responsive .ratng-box-title{
+  width: 100%;
+}
+.filter-responsive .popular-filters-title{
+  width: 100%;
+}
+.filter-responsive .activities-filters-box{
+  width: 25%;
+}
+.filter-responsive .activities-filters-title{
+  width: 100%;
 }
