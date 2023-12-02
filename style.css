@@ -251,7 +251,8 @@ a:hover {
   height: 500px;
   border-radius: 10px;
 }
-.overlay {
+.overlay,
+.overlay-inspiration {
   position: absolute;
   left: 0;
   top: 0;
@@ -558,6 +559,7 @@ input:focus {
   font-size: 28px;
   margin-bottom: 24px;
   line-height: 140%;
+  transition-duration: 1000ms;
 }
 
 .inspiration-article1 {
@@ -589,7 +591,7 @@ input:focus {
 }
 
 .inspiration-section h2 {
-  top: 50%;
+  top: 70%;
   position: absolute;
   bottom: 72px;
   left: 20px;
@@ -597,24 +599,39 @@ input:focus {
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
+  transition-duration: 1000ms;
 }
 
-.inspiration-section p {
+.p-inspiration {
   position: absolute;
   color: var(--whiteColor);
   font-size: 16px;
   font-weight: 500;
   line-height: 140%;
-  top: 216px;
+  top: 180px;
   left: 20px;
+  transition-duration: 1000ms;
 }
 
+.inspiration-article1:hover,
+.inspiration-article2:hover,
 .inspiration-article3:hover,
-.inspiration-article3:hover,
-.inspiration-article3:hover {
+.popular-section-article-img:hover {
   cursor: pointer;
 }
-
+.p-inspiration {
+  display: none;
+}
+.inspiration-article1:hover,
+.inspiration-article2:hover,
+.inspiration-article3:hover {
+  .h2-inspiration {
+    top: 40%;
+  }
+  .p-inspiration {
+    display: block;
+  }
+}
 .popular-hotels-section {
   position: relative;
   display: flex;
@@ -633,6 +650,7 @@ input:focus {
   border-radius: 8px;
   margin-right: 10px;
 }
+
 .popular-hotels-section h2 {
   margin-top: 12px;
   color: var(--headingTextColor);
@@ -645,7 +663,12 @@ input:focus {
   font-weight: 500;
   margin-bottom: 20px;
 }
-
+.popular-section-article-img{
+  transition: 300ms;
+}
+.popular-section-article-img:hover{
+  transform: translate(0,-4%);
+}
 .down-banner {
   position: relative;
   background-image: url(imgs/downBanner.jpg);
@@ -830,7 +853,10 @@ input:focus {
   justify-content: center;
 }
 
-.text-box {
+.text-box,
+.text-box-password,
+.text-box-create,
+.text-box-create {
   position: relative;
   display: flex;
   height: 45px;
@@ -843,7 +869,19 @@ input:focus {
   border-color: transparent;
   margin-bottom: 30px;
 }
-
+.warning-login {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 50px;
+}
+.warning-login p {
+  font-size: 14px;
+  color: #ad0000;
+}
+.fa-circle-exclamation {
+  font-size: 20px;
+}
 .email-text-box {
   position: relative;
 }
@@ -988,21 +1026,52 @@ input:focus {
   content: "Confirm password";
 }
 
-.eye-create-password,
-.eye-password,
-.eye-create-password-rewrite {
+.eye-password-create,
+.eye-password {
   position: absolute;
   z-index: 1;
+  cursor: pointer;
+}
+.passowrd-line,
+.password-line-create {
+  position: absolute;
+  width: 20px;
+  z-index: 1;
+  height: 2px;
+  background-color: var(--textColor);
+  transform: rotate(-45deg);
+  border-radius: 20px;
+}
+.passowrd-line {
+  top: 97px;
+  right: 15px;
+}
+.password-line-create {
+  top: 20px;
+  right: 16px;
+}
+.password-line-create2 {
+  bottom: 22px;
+  right: 16px;
+}
+.hide-password-line {
+  display: none;
 }
 .eye-password {
   right: 15px;
   top: 88px;
 }
-.eye-create-password {
+.eye-password-create {
   top: 10px;
   right: 15px;
 }
-.eye-create-password-rewrite {
+.form-sign-in {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.eye-password:nth-child(2) {
   top: 106px;
   right: 15px;
 }
@@ -2526,43 +2595,44 @@ a {
   font-size: 16px;
   top: 10px;
 }
-.filter-responsive h3{
+.filter-responsive h3 {
   font-size: 16px;
 }
 .filter-responsive .search-filter-aside input {
   width: 70%;
   top: 60px;
 }
-.filter-responsive .your-budget-box{
+.filter-responsive .your-budget-box {
   width: 125%;
 }
-.filter-responsive .budget-box-title{
+.filter-responsive .budget-box-title {
   width: 100%;
 }
-.filter-responsive .rating-box{
+.filter-responsive .rating-box {
   width: 110%;
 }
-.filter-responsive .rating{
+.filter-responsive .rating {
   width: 18%;
 }
-.filter-responsive .rating-one,.filter-responsive .rating-five {
+.filter-responsive .rating-one,
+.filter-responsive .rating-five {
   width: 18%;
 }
-.filter-responsive .popular-filters-box{
+.filter-responsive .popular-filters-box {
   width: 110%;
 }
-.filter-responsive label{
+.filter-responsive label {
   font-size: 14px;
 }
-.filter-responsive .ratng-box-title{
+.filter-responsive .ratng-box-title {
   width: 100%;
 }
-.filter-responsive .popular-filters-title{
+.filter-responsive .popular-filters-title {
   width: 100%;
 }
-.filter-responsive .activities-filters-box{
+.filter-responsive .activities-filters-box {
   width: 25%;
 }
-.filter-responsive .activities-filters-title{
+.filter-responsive .activities-filters-title {
   width: 100%;
 }
