@@ -1,7 +1,7 @@
 # Your-house
 Website contains 9 pages implemented using HTML CSS and JS technologies
 + fully responsive for all devices with changing in design to suit all devices
-+ pure HTML, CSS no bootstrap or similiar techonlogis used 
++ pure HTML, CSS --without any-- bootstrap or similiar techonlogis used 
 + Pixel perfect design
 
 ## pages in website
