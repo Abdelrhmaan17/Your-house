@@ -1,9 +1,13 @@
 # Your-house
-Website contains 9 pages implemented using pure HTML CSS and JS technologies
-+ fully responsive for all devices with changing in design to suit all devices
-+ pure HTML, CSS __without any__ other techonlogis used 
-+ Pixel perfect design
-+ contain form validation
+This is a travel booking website developed using only pure HTML, CSS, and JavaScript __with no other techonologies__. The website consists of 9 pages and focuses on hotel reservations for traveling abroad.
+
+## Features
++ **Fully responsive:** for all devices with changing in design to suit all devices
++ 
++ **Pixel perfect design:** I executed the figma design exactly as it is
+- **Form Validation:** Validates user inputs on various forms.
++ **animation:** for a dynamic user experience.
++ **Performance:** Optimized for fast loading and efficient rendering.
 
 ## Pages in website
 + Home page
