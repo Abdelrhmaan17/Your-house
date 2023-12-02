@@ -18,7 +18,6 @@ let btnSignUp = document.querySelector(".btn-sign-up");
 let button = document.querySelector(".sign-up-button");
 let warning = document.querySelector(".warning-login");
 warning.classList.add("hide-password-line");
-
 button.style.backgroundColor = "lightblue";
 
 // conditions after leaving field
@@ -28,17 +27,18 @@ passwordTextBoxCreate.addEventListener("blur", function (event) {
   let specialChars = /[$&@#%*&+_?!]/;
   if (
     textBoxValue.length <= 8 ||
+    textBoxValue.length > 20 ||
     textBoxValue.length === 0 ||
     !specialChars.test(textBoxValue)
   ) {
     warning.classList.remove("hide-password-line");
     btnSignUp.addEventListener("click", function (event) {
-
       event.preventDefault(); // Prevent the default behavior of the anchor tag
       alert(
         "You must use strong password more than 8 chars and contains special characters($&@#%*&+_?!)"
       );
     });
+    passwordTextBoxCreate.style.borderColor = "#2f80ed";
   } else {
     button.style.backgroundColor = "#2f80ed";
     warning.classList.add("hide-password-line");
