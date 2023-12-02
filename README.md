@@ -3,7 +3,6 @@ This is a travel booking website developed using only pure HTML, CSS, and JavaSc
 
 ## Features
 + **Fully responsive:** for all devices with changing in design to suit all devices
-+ 
 + **Pixel perfect design:** I executed the figma design exactly as it is
 - **Form Validation:** Validates user inputs on various forms.
 + **animation:** for a dynamic user experience.
