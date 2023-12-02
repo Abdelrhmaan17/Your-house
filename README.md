@@ -5,7 +5,7 @@ Website contains 9 pages implemented using pure HTML CSS and JS technologies
 + Pixel perfect design
 + contain form validation
 
-## pages in website
+## Pages in website
 + Home page
 + Search results page 
 + Place details page
