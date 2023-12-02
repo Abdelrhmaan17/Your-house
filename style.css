@@ -21,7 +21,7 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 22.4px */
+  line-height: 140%;
   letter-spacing: 0.32px;
 }
 D h1,
@@ -48,7 +48,6 @@ button {
 .header-nav {
   display: flex;
   justify-content: space-between;
-  /* width: 1210px; */
   padding-top: 14px;
   padding-bottom: 14px;
   align-items: center;
@@ -66,7 +65,6 @@ button {
   left: 30px;
   font-weight: 600;
   width: 78px;
-  /* padding-bottom: 5px; */
 }
 a {
   text-decoration: none;
@@ -112,7 +110,6 @@ a:hover {
   background: var(--mainColor);
   color: var(--whiteColor);
   margin-left: 10px;
-  /* margin-top: 14px; */
 }
 .sign-in-btn:hover,
 .register-btn:hover,
@@ -663,11 +660,11 @@ input:focus {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.popular-section-article-img{
+.popular-section-article-img {
   transition: 300ms;
 }
-.popular-section-article-img:hover{
-  transform: translate(0,-4%);
+.popular-section-article-img:hover {
+  transform: translate(0, -4%);
 }
 .down-banner {
   position: relative;
@@ -814,15 +811,9 @@ input:focus {
   /* set the width for the container */
   width: 100%;
 }
-
-/*  */
-/*  */
 /*  */
 /* CSS for sign up page */
 /*  */
-/*  */
-/*  */
-
 .main-container-sign-up,
 .main-container-sign-in,
 .main-container-create-pw,
@@ -855,7 +846,6 @@ input:focus {
 
 .text-box,
 .text-box-password,
-.text-box-create,
 .text-box-create {
   position: relative;
   display: flex;
@@ -867,17 +857,39 @@ input:focus {
   border-radius: 4px;
   background: var(--Gray-6, #f2f2f2);
   border-color: transparent;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
-.warning-login {
+.warning-login,
+.warning-create {
   display: flex;
   gap: 10px;
   position: absolute;
-  top: 50px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #cc0000;
+  color: white;
+  top: -3px;
+  right: -265px;
+}
+.warning-login p::before,
+.warning-create p::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #cc0000 transparent transparent;
+  position: absolute;
+}
+.warning-login p::before{
+  left: -62px;
+  top: 0px;
+}
+.warning-create p::before {
+  left: -18px;
+  top: 17px;
 }
 .warning-login p {
   font-size: 14px;
-  color: #ad0000;
+  position: relative;
 }
 .fa-circle-exclamation {
   font-size: 20px;
@@ -975,7 +987,6 @@ input:focus {
 .sign-up-instaed {
   position: absolute;
   display: flex;
-  /* gap: -5px; */
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -1000,11 +1011,7 @@ input:focus {
   color: var(--mainColor);
 }
 /*  */
-/*  */
-/*  */
 /* CSS for sign in page */
-/*  */
-/*  */
 /*  */
 .password-text-box,
 .create-password-text-box,
@@ -1075,7 +1082,6 @@ input:focus {
   top: 106px;
   right: 15px;
 }
-
 .keepme-sign-in-box {
   width: 20px;
   height: 20px;
@@ -1093,15 +1099,9 @@ input:focus {
   display: flex;
   gap: 8px;
 }
-
-/*  */
-/*  */
 /*  */
 /* Forgot password page */
 /*  */
-/*  */
-/*  */
-
 .forgot-btn {
   color: var(--mainColor);
   background-color: transparent;
@@ -1113,17 +1113,14 @@ input:focus {
 .main-container-sign-in {
   margin-bottom: 200px;
 }
-
 .link-for-forgot-pw {
   margin-top: 20px;
   margin-bottom: 60px;
 }
-
 .Forgot-pw-section h1 {
   font-size: 28px;
   line-height: 150%;
 }
-
 .terms-privacy-links {
   color: var(--mainColor);
 }
@@ -1136,13 +1133,8 @@ input:focus {
   font-weight: 400;
   line-height: 140%;
 }
-
-/*  */
-/*  */
 /*  */
 /* Create password page */
-/*  */
-/*  */
 /*  */
 .create-password-section h1 {
   margin-bottom: 20px;
@@ -1186,13 +1178,8 @@ input:focus {
   margin-top: 15px;
   margin-bottom: 40px;
 }
-
-/*  */
-/*  */
 /*  */
 /* start of search results page */
-/*  */
-/*  */
 /*  */
 .header-loged-in {
   background: linear-gradient(180deg, #2969bf 0%, #144e9d 100%);
@@ -1376,10 +1363,8 @@ a {
   border-radius: 5px;
   background: #fff;
   margin-top: 18px;
-  /* margin-left: 18px; */
   margin-right: 8px;
   position: relative;
-  /* display: inline-block; */
   top: 4px;
 }
 .label {
@@ -1492,7 +1477,6 @@ a {
 .our-top-picks-box {
   border-radius: 6px 0px 0px 6px;
   color: var(--mainColor);
-  /* background-color: ; */
   background: rgba(47, 128, 237, 0.05);
 }
 .shared-space-box {
@@ -1640,7 +1624,7 @@ a {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 18.2px */
+  line-height: 140%;
   letter-spacing: 0.26px;
 }
 
@@ -1721,13 +1705,8 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-
-/*  */
-/*  */
 /*  */
 /* start of place details style */
-/*  */
-/*  */
 /*  */
 .body-for-place-detailes-page,
 .body-for-checkout {
@@ -2070,13 +2049,8 @@ a {
   border: none;
   color: white;
 }
-
-/*  */
-/*  */
 /*  */
 /* start of checkout page */
-/*  */
-/*  */
 /*  */
 .main-container-checkout h1 {
   color: #1a1a1a;
@@ -2114,7 +2088,6 @@ a {
   font-size: 16px;
   font-weight: 600;
 }
-
 .room-info p {
   color: white;
   font-size: 16px;
@@ -2136,7 +2109,6 @@ a {
   left: 20px;
   top: 14px;
 }
-
 .label-first-checkout,
 .label-last-checkout,
 .label-countries-code,
@@ -2153,7 +2125,7 @@ a {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
 }
 .label-create-password-box {
   top: -20px;
