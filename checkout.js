@@ -24,6 +24,6 @@ countriesCodeList.forEach((item) => {
   item.addEventListener("click", function () {
     console.log(defaultCodeContent);
     defaultCodeContent.textContent = item.querySelector("p").textContent;
-    dropdownDefaultCountryImg.src =item.querySelector("img").src
+    dropdownDefaultCountryImg.src = item.querySelector("img").src;
   });
 });

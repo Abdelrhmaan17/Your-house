@@ -57,6 +57,18 @@
   .blue-box-promo img {
     width: 25%;
   }
+  .inspiration-article1,
+  .inspiration-article2,
+  .inspiration-article3 {
+    width: 350px;
+    height: 280px;
+  }
+  .p-inspiration {
+    display: block;
+  }
+  .h2-inspiration {
+    top: 40%;
+  }
 }
 @media (max-width: 700px) {
   .room-card-place-ditales {
@@ -81,7 +93,14 @@
     left: 55%;
   }
 }
-
+@media (max-width: 1017px) {
+  .inspiration-article1,
+  .inspiration-article2,
+  .inspiration-article3 {
+    width: 295px;
+    height: 260px;
+  }
+}
 @media (max-width: 1017px) {
   .nav-links {
     display: none;
@@ -300,7 +319,7 @@
   .search-place-form p {
     font-size: 8px;
   }
-  .main-container-search-results{
+  .main-container-search-results {
     width: 100%;
   }
 }
@@ -334,8 +353,8 @@
   .inspiration-article1,
   .inspiration-article2,
   .inspiration-article3 {
-    width: 473px;
-    height: 340px;
+    width: 430px;
+    height: 300px;
   }
 }
 

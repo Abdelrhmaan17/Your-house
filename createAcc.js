@@ -3,9 +3,6 @@ let passwordLineCreate = document.querySelector(".password-line-create");
 let passwordTextBoxCreate = document.querySelector(".text-box-create");
 
 // adding logedin navbar
-
-//
-//
 //
 eyePassword1.addEventListener("click", hidePassword);
 function hidePassword() {

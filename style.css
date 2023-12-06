@@ -579,9 +579,12 @@ input:focus {
   height: 280px;
   flex-shrink: 0;
   margin-top: 20px;
-  margin-right: 10px;
   border-radius: 8px;
   background-size: cover;
+}
+.inspiration-article1,
+.inspiration-article2 {
+  margin-right: 10px;
 }
 
 .inspiration-article1,
@@ -590,7 +593,7 @@ input:focus {
   border-radius: 8px;
 }
 
-.inspiration-section h2 {
+.h2-inspiration {
   top: 70%;
   position: absolute;
   bottom: 72px;
