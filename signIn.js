@@ -1,6 +1,15 @@
 let eyePassword = document.querySelector(".eye-password");
 let passwordLine = document.querySelector(".passowrd-line");
 let textboxPwSignIn = document.querySelector(".text-box-password");
+let textboxEmailSignIn = document.querySelector(".text-box-email-signin");
+let btnSignIn = document.querySelector(".btn-sign-in");
+let button = document.querySelector(".sign-in-button");
+let warningPassword = document.querySelector(".warning-signin-pw");
+let warningEmail = document.querySelector(".warning-signin");
+warningEmail.style.display = "none";
+warningPassword.style.display = "none";
+button.style.backgroundColor = "lightblue";
+let test = true;
 
 eyePassword.addEventListener("click", hidePassword);
 function hidePassword() {
@@ -50,15 +59,7 @@ btnSignUp.addEventListener("click", function (event) {
 
 // password login validation code
 //
-let textboxEmailSignIn = document.querySelector(".text-box-email-signin");
-let btnSignIn = document.querySelector(".btn-sign-in");
-let button = document.querySelector(".sign-in-button");
-let warningPassword = document.querySelector(".warning-signin-pw");
-let warningEmail = document.querySelector(".warning-signin");
-warningEmail.style.display = "none";
-warningPassword.style.display = "none";
-button.style.backgroundColor = "lightblue";
-let test = true;
+
 textboxPwSignIn.addEventListener("blur", function (event) {
   let textBoxValue = textboxPwSignIn.value;
   // console.log(textBoxValue.length);
