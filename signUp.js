@@ -5,6 +5,8 @@ let warning = document.querySelector(".warning-create");
 warning.classList.add("hide-password-line");
 button.style.backgroundColor = "lightblue";
 
+let test = true;
+
 emailTextBoxCreate.addEventListener("blur", function (event) {
   let textBoxValue = emailTextBoxCreate.value;
   let specialChars = /[@]/;
@@ -16,13 +18,14 @@ emailTextBoxCreate.addEventListener("blur", function (event) {
   ) {
     warning.classList.remove("hide-password-line");
     btnSignUp.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default behavior of the anchor tag
-      alert(
-        "You must use strong password more than 8 chars and contains special characters($&@#%*&+_?!)"
-      );
+      if (test) {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+        alert("You must use email like example@gmail.com");
+      }
     });
     emailTextBoxCreate.style.borderColor = "#2f80ed";
   } else {
+    test = false;
     button.style.backgroundColor = "#2f80ed";
     warning.classList.add("hide-password-line");
   }

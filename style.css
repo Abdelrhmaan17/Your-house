@@ -45,14 +45,17 @@ button {
   width: calc(100% - 200px);
 }
 
-.header-nav {
+.header-nav,
+.header-nav-login {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
-  align-items: center;
   margin-bottom: 12px;
 }
+
 /* navigation bar styling */
 .nav-logo {
   position: relative;
@@ -846,7 +849,8 @@ input:focus {
 
 .text-box,
 .text-box-password,
-.text-box-create {
+.text-box-create,
+.text-box-email-signin {
   position: relative;
   display: flex;
   height: 45px;
@@ -859,8 +863,13 @@ input:focus {
   border-color: transparent;
   margin-bottom: 15px;
 }
+.text-box-password {
+  margin-top: 30px;
+}
 .warning-login,
-.warning-create {
+.warning-create,
+.warning-signin,
+.warning-signin-pw {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -868,26 +877,45 @@ input:focus {
   border-radius: 8px;
   background-color: #cc0000;
   color: white;
+}
+.warning-login,
+.warning-create,
+.warning-signin {
   top: -3px;
   right: -265px;
 }
+.warning-signin-pw {
+  top: 71px;
+  right: -296px;
+}
 .warning-login p::before,
-.warning-create p::before {
+.warning-create p::before,
+.warning-signin p::before,
+.warning-signin-pw p::before {
   content: "";
   border-width: 10px;
   border-style: solid;
   border-color: transparent #cc0000 transparent transparent;
   position: absolute;
 }
-.warning-login p::before{
+.warning-login p::before {
   left: -62px;
   top: 0px;
 }
+.warning-signin-pw p::before {
+  left: -19px;
+  top: 16px;
+}
 .warning-create p::before {
+  left: -63px;
+  top: 3px;
+}
+.warning-signin p::before {
   left: -18px;
   top: 17px;
 }
-.warning-login p {
+.warning-login p,
+.warning-create p {
   font-size: 14px;
   position: relative;
 }
@@ -1234,6 +1262,7 @@ a {
 
 .notifications-profile-photo {
   display: flex;
+  position: relative;
 }
 
 .header-loged-in-nav-search-results .notifications-profile-photo {
@@ -1242,8 +1271,10 @@ a {
 .notifications-icon {
   margin-top: 10px;
   margin-right: 22px;
+  cursor: pointer;
 }
 .user-profile-photo-nav {
+  cursor: pointer;
   width: 44px;
   height: 44px;
   flex-shrink: 0;
@@ -1262,12 +1293,72 @@ a {
 .nav-link-white a {
   color: white;
 }
+/* dropdown menu style */
+
+.dropdown-profile {
+  position: absolute;
+  list-style-type: none;
+  background-color: white;
+  right: 0px;
+  margin: 0;
+  padding: 0px;
+  min-width: 200px;
+  top: 135%;
+  border-radius: 5px;
+  z-index: 1;
+  /* display: none; */
+}
+
+.dropdown-profile::before {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--mainColor) transparent;
+  right: 10px;
+  top: -20px;
+}
+
+.dropdown-profile a {
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-decoration: none;
+  color: var(--lightGrayText);
+  padding-left: 10px;
+}
+.dropdown-profile a:hover {
+  padding-left: 20px;
+  transition: 0.3s;
+}
+
+.op1,
+.op2,
+.op3 {
+  border-bottom: 1px solid var(--mainColor);
+}
+.op4 a {
+  color: var(--mainColor);
+}
+.user-profile-photo-nav:hover {
+  .dropdown {
+    display: block;
+  }
+}
+.dropdown-profile {
+  border: 1px solid var(--mainColor);
+  padding: 10px;
+}
+/* end of dropdown style */
 .search-results-nav-container,
 .search-results-nav-container {
-  width: 1030px;
+  width: 80%;
 }
 .place-details-nav-container {
   margin-top: 50px;
+}
+.search-results-place-form {
+  width: 75%;
 }
 .main-container-search-results {
   display: flex;
@@ -1449,7 +1540,7 @@ a {
 /* end of aside style */
 
 .results-home-container {
-  width: 915px;
+  width: 65%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1533,7 +1624,6 @@ a {
 }
 
 .hotel-card {
-  width: 915px;
   height: 240px;
   flex-shrink: 0;
   border-radius: 5px;

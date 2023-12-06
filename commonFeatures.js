@@ -23,3 +23,26 @@ closeBtn.addEventListener("click", closeSidebar);
 function closeSidebar() {
   sidebar.classList.remove("show-sidebar");
 }
+
+// showing and hiding profile dropdown
+let dropdownProfile = document.querySelector(".dropdown-profile");
+dropdownProfile.style.display = "none";
+let userProfile = document.querySelector(".user-profile-photo-nav");
+userProfile.addEventListener("click", function (event) {
+  if (dropdownProfile.style.display === "none") {
+    dropdownProfile.style.display = "block";
+  } else {
+    dropdownProfile.style.display = "none";
+  }
+});
+
+//logut feature
+let headerGuest = document.querySelector(".header-nav");
+let headerProfile = document.querySelector(".header-nav-login");
+let logoutBtn = document.querySelector(".op4");
+
+logoutBtn.addEventListener("click", function () {
+  headerGuest.style.display = "flex";
+  headerProfile.style.display = "none";
+  event.preventDefault();
+});

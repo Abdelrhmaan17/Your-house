@@ -300,6 +300,9 @@
   .search-place-form p {
     font-size: 8px;
   }
+  .main-container-search-results{
+    width: 100%;
+  }
 }
 @media (max-width: 685px) {
   .section1-enjoy-vacation p {
@@ -313,8 +316,6 @@
     line-height: 150%;
   }
 }
-
-
 
 @media (max-width: 400px) {
   .section1-enjoy-vacation p {
@@ -485,6 +486,9 @@
   }
   .main-container-search-results {
     flex-direction: column;
+  }
+  .results-home-container {
+    width: 100%;
   }
   .filter-aside {
     display: none;
