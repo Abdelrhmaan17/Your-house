@@ -1,4 +1,4 @@
-# Your-house
+# Your-home
 This is a travel booking website developed using only pure HTML, CSS, and JavaScript __with no other techonologies__. The website consists of 9 pages and focuses on hotel reservations for traveling abroad.
 
 ## Features
