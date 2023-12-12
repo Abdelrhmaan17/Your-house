@@ -1,16 +1,15 @@
-let eyePassword = document.querySelector(".eye-password");
 let passwordLine = document.querySelector(".passowrd-line");
 let textboxPwSignIn = document.querySelector(".text-box-password");
 let textboxEmailSignIn = document.querySelector(".text-box-email-signin");
 let btnSignIn = document.querySelector(".btn-sign-in");
-let button = document.querySelector(".sign-in-button");
-let warningPassword = document.querySelector(".warning-signin-pw");
-let warningEmail = document.querySelector(".warning-signin");
-warningEmail.style.display = "none";
-warningPassword.style.display = "none";
-button.style.backgroundColor = "lightblue";
-let test = true;
+let signInButton = document.querySelector(".sign-in-button");
+let warningLoginPassword = document.querySelector(".warning-signin-pw");
+let warningEmailSignIn = document.querySelector(".warning-signin");
+warningEmailSignIn.style.display = "none";
+warningLoginPassword.style.display = "none";
+signInButton.style.backgroundColor = "lightblue";
 
+let eyePassword = document.querySelector(".eye-password");
 eyePassword.addEventListener("click", hidePassword);
 function hidePassword() {
   if (passwordLine.style.display === "none") {
@@ -25,35 +24,26 @@ function hidePassword() {
 // email login validation code
 //
 textboxEmailSignIn.addEventListener("blur", function (event) {
-  let textBoxValue = textboxEmailSignIn.value;
+  let test = true;
+  let textBoxValueEmail = textboxEmailSignIn.value;
   let specialChars = /[@]/;
   if (
-    textBoxValue.length > 25 ||
-    textBoxValue.length < 12 ||
-    textBoxValue.length === 0 ||
-    !specialChars.test(textBoxValue)
+    textBoxValueEmail.length > 25 ||
+    textBoxValueEmail.length < 12 ||
+    !specialChars.test(textBoxValueEmail)
   ) {
-    warningEmail.style.display = "flex";
-    btnSignUp.addEventListener("click", function (event) {
+    warningEmailSignIn.style.display = "flex";
+    btnSignIn.addEventListener("click", function (event) {
       if (test) {
         event.preventDefault(); // Prevent the default behavior of the anchor tag
         alert("You must use email like example@gmail.com");
+        test = false;
       }
     });
     textboxEmailSignIn.style.borderColor = "#2f80ed";
   } else {
-    test = false;
-    button.style.backgroundColor = "#2f80ed";
-    warningEmail.style.display = "none";
-  }
-});
-
-//conditions when clicking btn
-btnSignUp.addEventListener("click", function (event) {
-  let textBoxValue = textboxEmailSignIn.value;
-  if (textBoxValue === "") {
-    warningEmail.style.display = "flex";
-    event.preventDefault();
+    signInButton.style.backgroundColor = "#2f80ed";
+    warningEmailSignIn.style.display = "none";
   }
 });
 
@@ -61,41 +51,45 @@ btnSignUp.addEventListener("click", function (event) {
 //
 
 textboxPwSignIn.addEventListener("blur", function (event) {
-  let textBoxValue = textboxPwSignIn.value;
-  // console.log(textBoxValue.length);
+  let test = true;
+  let textBoxValuePassword = textboxPwSignIn.value;
   let specialChars = /[$&@#%*&+_?!]/;
   if (
-    textBoxValue.length <= 8 ||
-    textBoxValue.length > 20 ||
-    textBoxValue.length === 0 ||
-    !specialChars.test(textBoxValue)
+    textBoxValuePassword.length <= 8 ||
+    textBoxValuePassword.length > 30 ||
+    !specialChars.test(textBoxValuePassword)
   ) {
-    warningPassword.style.display = "flex";
+    warningLoginPassword.style.display = "flex";
     btnSignIn.addEventListener("click", function (event) {
       if (test) {
         event.preventDefault(); // Prevent the default behavior of the anchor tag
         alert(
           "You must use strong password more than 8 chars and contains special characters($&@#%*&+_?!)"
         );
+        test = false;
       }
     });
   } else {
-    test = false;
-    button.style.backgroundColor = "#2f80ed";
-    warningPassword.style.display = "none";
+    signInButton.style.backgroundColor = "#2f80ed";
+    warningLoginPassword.style.display = "none";
   }
 });
 //conditions when clicking btn
 btnSignIn.addEventListener("click", function (event) {
-  let textBoxValue = textboxPwSignIn.value;
-  if (textBoxValue === "") {
-    if (test) {
-      event.preventDefault(); // Prevent the default behavior of the anchor tag
-      alert(
-        "You must use strong password more than 8 chars and contains special characters($&@#%*&+_?!)"
-      );
-    }
-    warningPassword.style.display = "flex";
+  let textBoxValuePassword = textboxPwSignIn.value;
+  let textBoxValueEmail = textboxEmailSignIn.value;
+  // adding password box condition
+  if (textBoxValuePassword === "") {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    alert("You must fill out your valid password");
+    warningLoginPassword.style.display = "flex";
+  }
+  // adding email box condition
+  if (textBoxValueEmail === "") {
     event.preventDefault();
+    alert("You must fill out you valid email");
+    warningEmailSignIn.style.display = "flex";
   }
 });
+
+// trying to deal with local storage

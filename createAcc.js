@@ -1,10 +1,10 @@
-let eyePassword1 = document.querySelector(".eye-password-create");
+let eyePasswordCreate = document.querySelector(".eye-password-create");
 let passwordLineCreate = document.querySelector(".password-line-create");
 let passwordTextBoxCreate = document.querySelector(".text-box-create");
 
 // adding logedin navbar
 //
-eyePassword1.addEventListener("click", hidePassword);
+eyePasswordCreate.addEventListener("click", hidePassword);
 function hidePassword() {
   if (passwordLineCreate.classList.contains("hide-password-line")) {
     passwordLineCreate.classList.remove("hide-password-line");
@@ -19,10 +19,10 @@ function hidePassword() {
 //
 
 let btnSignUp = document.querySelector(".btn-sign-up");
-let button = document.querySelector(".sign-up-button");
-let warning = document.querySelector(".warning-login");
-warning.classList.add("hide-password-line");
-button.style.backgroundColor = "lightblue";
+let buttonSignUp = document.querySelector(".sign-up-button");
+let warningCreate = document.querySelector(".warning-login");
+warningCreate.classList.add("hide-password-line");
+buttonSignUp.style.backgroundColor = "lightblue";
 let test = true;
 // conditions after leaving field
 passwordTextBoxCreate.addEventListener("blur", function (event) {
@@ -35,7 +35,7 @@ passwordTextBoxCreate.addEventListener("blur", function (event) {
     textBoxValue.length === 0 ||
     !specialChars.test(textBoxValue)
   ) {
-    warning.classList.remove("hide-password-line");
+    warningCreate.classList.remove("hide-password-line");
     btnSignUp.addEventListener("click", function (event) {
       if (test) {
         event.preventDefault(); // Prevent the default behavior of the anchor tag
@@ -46,8 +46,8 @@ passwordTextBoxCreate.addEventListener("blur", function (event) {
     });
   } else {
     test = false;
-    button.style.backgroundColor = "#2f80ed";
-    warning.classList.add("hide-password-line");
+    buttonSignUp.style.backgroundColor = "#2f80ed";
+    warningCreate.classList.add("hide-password-line");
   }
 });
 //conditions when clicking btn
@@ -60,7 +60,7 @@ btnSignUp.addEventListener("click", function (event) {
         "You must use strong password more than 8 chars and contains special characters($&@#%*&+_?!)"
       );
     }
-    warning.classList.remove("hide-password-line");
+    warningCreate.classList.remove("hide-password-line");
     event.preventDefault();
   }
 });

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Thank you</title>
+  </head>
+  <body class="thankyou-body">
+    <div class="box-thankyou">
+      <img class="confirmation-thank-you" src="imgs/confirmation.webp" alt="" />
+      <p class="thankyou-title">
+        Thank you, <span class="span-thankyou"></span>
+      </p>
+      <p class="thankyou-p">
+        we'll get back to you with a confirmation of your reversation,
+        <span class="nice-day">have a nice day!</span>
+      </p>
+      <script>
+        document.querySelector(".span-thankyou").innerHTML =
+          localStorage.getItem("passData");
+      </script>
+    </div>
+  </body>
+</html>

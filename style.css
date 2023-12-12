@@ -385,10 +385,11 @@ a:hover {
   border-radius: 6px;
   border-color: transparent;
   position: absolute;
+  transition: all 0.9s ease;
 }
 .search-nav-btn1:hover,
 .search-nav-btn2:hover {
-  width: min-content;
+  background-color: #144e9d;
 }
 .search-nav-btn1 {
   right: 50%;
@@ -414,6 +415,7 @@ a:hover {
 .check-out-input-search-rooms,
 .guests-input-search-rooms,
 .checkout-input,
+.checkout-input-first-name,
 .phone-number-input,
 .name-on-card-input,
 .debit-card-input,
@@ -528,7 +530,7 @@ input:focus {
   height: 220px;
   flex-shrink: 0;
   border-radius: 8px;
-  transition: 0.3;
+  transition: all 0.5s ease;
 }
 .choose-country-section-article-img:hover {
   cursor: pointer;
@@ -667,7 +669,7 @@ input:focus {
   margin-bottom: 20px;
 }
 .popular-section-article-img {
-  transition: 300ms;
+  transition: all 0.3s ease;
 }
 .popular-section-article-img:hover {
   transform: translate(0, -4%);
@@ -853,7 +855,8 @@ input:focus {
 .text-box,
 .text-box-password,
 .text-box-create,
-.text-box-email-signin {
+.text-box-email-signin,
+.text-box-forgot {
   position: relative;
   display: flex;
   height: 45px;
@@ -959,6 +962,11 @@ input:focus {
 .back-to-sign-inbox-button:hover {
   background-color: #004eb4;
   cursor: pointer;
+}
+button {
+  transition: all 0.9s ease;
+}
+button:hover {
 }
 .under-sign-up-lines {
   width: 100px;
@@ -1309,7 +1317,7 @@ a {
   top: 135%;
   border-radius: 5px;
   z-index: 1;
-  /* display: none; */
+  display: none;
 }
 
 .dropdown-profile::before {
@@ -2161,8 +2169,34 @@ a {
   background: #fff;
   margin-bottom: 50px;
 }
+
+.pay-visa-btn,
+.pay-cash-btn {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  gap: 10px;
+  border-radius: 6px;
+  border-color: transparent;
+  left: 200px;
+  top: -10px;
+  font-weight: bold;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.pay-cash-btn {
+  display: none;
+}
+.flex-btns {
+  display: flex;
+  gap: 10px;
+}
 .payment-options-box {
   height: 576px;
+  display: none;
 }
 .room-info,
 .payment-info {
@@ -2259,7 +2293,8 @@ a {
 .country-code,
 .country-code-op1,
 .country-code-op2,
-.country-code-op3 {
+.country-code-op3,
+.country-code-op4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2285,9 +2320,14 @@ a {
   padding: 0;
   margin-bottom: -9px;
 }
+.country-code-op4 {
+  top: 185px;
+  left: 12px;
+}
 .country-code-op1,
 .country-code-op2,
-.country-code-op3 {
+.country-code-op3,
+.country-code-op4 {
   left: 12px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -2297,14 +2337,15 @@ a {
 }
 .country-code-op1:hover,
 .country-code-op2:hover,
-.country-code-op3:hover {
+.country-code-op3:hover,
+.country-code-op4:hover {
   padding-left: 14px;
   cursor: pointer;
 }
 .options-country-code {
-  margin-top: 220px;
+  margin-top: 260px;
   width: 150px;
-  height: 150px;
+  height: 190px;
   border-radius: 4px;
   background: white;
   border-style: solid;
@@ -2700,4 +2741,40 @@ a {
 }
 .filter-responsive .activities-filters-title {
   width: 100%;
+}
+/* end of this page */
+/* start of thank you page */
+
+.confirmation-thank-you {
+  width: 250px;
+  height: 250px;
+}
+
+.thankyou-body {
+  text-align: center;
+}
+.thankyou-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.thankyou-p {
+  width: 400px;
+  font-size: 18px;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.box-thankyou {
+  width: 500px;
+  height: 200px;
+  background-color: white;
+  margin-bottom: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, 50%);
+}
+.span-thankyou {
+  font-weight: bold;
+}
+.nice-day {
+  color: var(--mainColor);
+  font-weight: bold;
 }

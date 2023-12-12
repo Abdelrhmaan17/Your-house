@@ -27,3 +27,17 @@ countriesCodeList.forEach((item) => {
     dropdownDefaultCountryImg.src = item.querySelector("img").src;
   });
 });
+
+let payVisaBtn = document.querySelector(".pay-visa-btn");
+let payCashBtn = document.querySelector(".pay-cash-btn");
+let visaPaymentBox = document.querySelector(".payment-options-box");
+payVisaBtn.addEventListener("click", function (event) {
+  visaPaymentBox.style.display = "block";
+  payVisaBtn.style.display = "none";
+  payCashBtn.style.display = "block";
+});
+payCashBtn.addEventListener("click", function (event) {
+  visaPaymentBox.style.display = "none";
+  payCashBtn.style.display = "none";
+  payVisaBtn.style.display = "block";
+});

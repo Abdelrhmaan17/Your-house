@@ -26,6 +26,13 @@
       content="Log in for to find a home that suits you!"
     />
     <title>Forgot password</title>
+    <script>
+      function passForgotEmail() {
+        let emailForgot = document.querySelector(".text-box-forgot").value;
+        localStorage.setItem("passData", emailForgot);
+        return false;
+      }
+    </script>
   </head>
   <body>
     <div class="main-container-home">
@@ -33,7 +40,6 @@
         <aside class="sidebar">
           <div class="sidebar-container">
             <div>
-              <img class="logo" src="logo.png" alt="" />
               <button class="close-btn"><i class="fas fa-times"></i></button>
             </div>
             <ul class="links">
@@ -91,14 +97,17 @@
           We’ll send you a link to reset it. Enter your email address used for
           My Dream Place
         </p>
-        <form>
+        <form action="check-inbox.html">
           <label class="email-text-box">
-            <input class="text-box" type="text" placeholder="" />
+            <input class="text-box-forgot" type="text" placeholder="" />
           </label>
+          <input
+            class="forgot-pw-button"
+            type="submit"
+            value="Send reset link"
+            onclick="passForgotEmail();"
+          />
         </form>
-        <a href="check-inbox.html"
-          ><button class="forgot-pw-button">Send reset link</button></a
-        >
         <p class="conditions-text">
           By creating an account, you agree with our<span
             class="terms-privacy-links"

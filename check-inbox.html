@@ -30,7 +30,6 @@
         <aside class="sidebar">
           <div class="sidebar-container">
             <div>
-              <img class="logo" src="logo.png" alt="" />
               <button class="close-btn"><i class="fas fa-times"></i></button>
             </div>
             <ul class="links">
@@ -60,7 +59,7 @@
         </aside>
         <button class="sidebar-burger-menu">
           <i class="fas fa-bars"></i>
-        </button> 
+        </button>
         <div class="nav-logo">
           <a href="index.html">
             <svg
@@ -87,7 +86,6 @@
           <svg
             class="inbox-photo"
             xmlns="http://www.w3.org/2000/svg"
-            
             viewBox="0 0 200 200"
             fill="none"
           >
@@ -227,9 +225,13 @@
         <h1 class="check-inbox-heading">Check your inbox</h1>
         <p class="we-sent-email">
           We have just emailed you the instrustions and a reset password link to
-          <span>Sumail_john@gmail.com.</span> It might take a few minutes to
+          <span class="email-storage"></span> It might take a few minutes to
           arrive
         </p>
+        <script>
+          document.querySelector(".email-storage").innerHTML =
+            localStorage.getItem("passData");
+        </script>
         <a href="sign-in.html"
           ><button class="back-to-sign-inbox-button">Back to sign in</button></a
         >

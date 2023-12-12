@@ -1,4 +1,5 @@
-// code for burgermenu sidebar responsive design
+//1. COMMON FEATURES FOR WEBSITE
+// 1.1 FEATURE SIDEBAR
 let sidebarBurgerMenu = document.querySelector(".sidebar-burger-menu");
 let sidebar = document.querySelector(".sidebar");
 let sidebarContainer = document.querySelector(".sidebar-container");
@@ -23,26 +24,20 @@ closeBtn.addEventListener("click", closeSidebar);
 function closeSidebar() {
   sidebar.classList.remove("show-sidebar");
 }
+// END OF FEATURE SIDEBAR
 
-// showing and hiding profile dropdown
-let dropdownProfile = document.querySelector(".dropdown-profile");
-dropdownProfile.style.display = "none";
-let userProfile = document.querySelector(".user-profile-photo-nav");
-userProfile.addEventListener("click", function (event) {
-  if (dropdownProfile.style.display === "none") {
-    dropdownProfile.style.display = "block";
-  } else {
-    dropdownProfile.style.display = "none";
-  }
-});
+// let forgotTextBox = document.querySelector(".text-box-forgot");
+// let sendLink = document.querySelector(".send-link");
+// sendLink.addEventListener("click", function (event) {
+//   let forgotTextBoxValue = forgotTextBox.value;
+//   console.log(forgotTextBoxValue);
+//   event.preventDefault();
+//   let forgotEmail = window.localStorage.setItem(
+//     "emailForgot",
+//     forgotTextBoxValue
+//   );
+// });
 
-//logut feature
-let headerGuest = document.querySelector(".header-nav");
-let headerProfile = document.querySelector(".header-nav-login");
-let logoutBtn = document.querySelector(".op4");
-
-logoutBtn.addEventListener("click", function () {
-  headerGuest.style.display = "flex";
-  headerProfile.style.display = "none";
-  event.preventDefault();
-});
+// let checkInbox = document.querySelector("emailStorage");
+// let EmailCheckInbox = window.localStorage.getItem("emailForgot");
+// checkInbox.innerHTML  = EmailCheckInbox;
