@@ -819,6 +819,45 @@ input:focus {
   /* set the width for the container */
   width: 100%;
 }
+
+/* animation code */
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 700ms;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.popular-section-article1,
+.article1,
+.inspiration-article1 {
+  transition-delay: 200ms;
+  z-index: 4;
+}
+
+.popular-section-article2,
+.article2,
+.inspiration-article2 {
+  transition-delay: 450ms;
+  z-index: 3;
+}
+
+.popular-section-article3,
+.article3,
+.inspiration-article3 {
+  transition-delay: 700ms;
+  z-index: 2;
+}
+.popular-section-article4,
+.article4 {
+  transition-delay: 950ms;
+  z-index: 1;
+}
+/* end animation code */
+
 /*  */
 /* CSS for sign up page */
 /*  */

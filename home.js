@@ -20,3 +20,12 @@ logoutBtn.addEventListener("click", function (event) {
   event.preventDefault();
 });
 // END OF FEATURE LOGOUT
+
+let observer = new IntersectionObserver((entites) => {
+  entites.forEach((entity) => {
+    if (entity.isIntersecting) entity.target.classList.add("show");
+  });
+});
+
+let hiddenSections = document.querySelectorAll(".hidden");
+hiddenSections.forEach((el) => observer.observe(el));
